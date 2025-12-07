@@ -44,33 +44,122 @@
 
         <!-- corp du jeux -->
         <div class="game_sapace">
-            <div class="bloc_left">
-                <div class="bloc_left_description">
+            <div class="bloc_left bloc_contain">
+                <div class="bloc_left_description bloc_description">
                     <h2>⚙️ AMÉLIORATIONS</h2>
                 </div>
                 <div class="option">
                     <div class="icone_bloc"><img src="/images/cuisinier.jpeg" alt=""></div>
-                    <div class="description"></div>
+                    <div class="description">
+                        <div class="upgrade-name">Cuisinier Simple</div>
+                        <div class="upgrade-production">+5 riz/sec</div>
+                        <div class="upgrade-cost">Coût: 50 riz</div>
+                    </div>
+                    <div class="upgrade-count" id="robot-count">
+                        <span>0</span>
+                    </div>
                 </div>
                 <div class="option">
                     <div class="icone_bloc"><img src="/images/machine cuisson.jpeg" alt=""></div>
-                    <div class="description"></div>
+                    <div class="description">
+                        <div class="upgrade-name">Machine à Vapeur</div>
+                        <div class="upgrade-production">+100 riz/sec</div>
+                        <div class="upgrade-cost">Coût: 200 riz</div>
+                    </div>
+                    <div class="upgrade-count" id="robot-count">
+                        <span>0</span>
+                    </div>
                 </div>
                 <div class="option">
                     <div class="icone_bloc"><img src="/images/robot.jpeg" alt=""></div>
-                    <div class="description"></div>
+                    <div class="description">
+                        <div class="upgrade-name">Robot Cuisinier</div>
+                        <div class="upgrade-production">+20 riz/sec</div>
+                        <div class="upgrade-cost">Coût: 1,000 riz</div>
+                    </div>
+                    <div class="upgrade-count" id="robot-count">
+                        <span>0</span>
+                    </div>
                 </div>
 
                 <div class="option">
                     <div class="icone_bloc"><img src="/images/usine.jpeg" alt=""></div>
-                    <div class="description"></div>
+                    <div class="description">
+                        <div class="upgrade-name">Usine Automatique</div>
+                        <div class="upgrade-production">+500 riz/sec</div>
+                        <div class="upgrade-cost">Coût: 5,000 riz</div>
+                    </div>
+                    <div class="upgrade-count" id="robot-count">
+                        <span>0</span>
+                    </div>
                 </div>
                 <div class="option button"><button>Acheter</button></div>
-                
+
             </div>
+
+
             <div class="bloc_center"></div>
-            <div class="bloc_right">
+
+
+            <div class="bloc_right bloc_contain">
+                <div class="bloc_rigth_description bloc_description">
+                    <h2>👨‍🍳 VOS CHEFS</h2>
+                </div>
+                <div class="option">
+                   <!-- ✨ AJOUTÉ : Boost quotidien -->
+                    <div class="boost-box" onclick="activateBoost()">
+                        <div class="boost-title">⚡ BOOST QUOTIDIEN</div>
+                        <div class="boost-desc">x2 riz pendant 3 min</div>
+                        <div class="boost-timer">Disponible !</div>
+                    </div>
+                </div>
+
+                <div class="option">
+                    <div class="icone_bloc"><img src="/images/cuisinier.jpeg" alt=""></div>
+                    <div class="description">
+                        <div class="upgrade-name">Cuisinier Simple</div>
+                        <div class="upgrade-production">+5 riz/sec</div>
+                        <div class="upgrade-cost">Coût: 50 riz</div>
+                    </div>
+                    <div class="upgrade-count" id="robot-count">
+                        <span>0</span>
+                    </div>
+                </div>
                 
+                <div class="option">
+                    <div class="icone_bloc"><img src="/images/machine cuisson.jpeg" alt=""></div>
+                    <div class="description">
+                        <div class="upgrade-name">Machine à Vapeur</div>
+                        <div class="upgrade-production">+100 riz/sec</div>
+                        <div class="upgrade-cost">Coût: 200 riz</div>
+                    </div>
+                    <div class="upgrade-count" id="robot-count">
+                        <span>0</span>
+                    </div>
+                </div>
+                <div class="option">
+                    <div class="icone_bloc"><img src="/images/robot.jpeg" alt=""></div>
+                    <div class="description">
+                        <div class="upgrade-name">Robot Cuisinier</div>
+                        <div class="upgrade-production">+20 riz/sec</div>
+                        <div class="upgrade-cost">Coût: 1,000 riz</div>
+                    </div>
+                    <div class="upgrade-count" id="robot-count">
+                        <span>0</span>
+                    </div>
+                </div>
+
+                <div class="option">
+                    <div class="icone_bloc"><img src="/images/usine.jpeg" alt=""></div>
+                    <div class="description">
+                        <div class="upgrade-name">Usine Automatique</div>
+                        <div class="upgrade-production">+500 riz/sec</div>
+                        <div class="upgrade-cost">Coût: 5,000 riz</div>
+                    </div>
+                    <div class="upgrade-count" id="robot-count">
+                        <span>0</span>
+                    </div>
+                </div>
             </div>
         </div>
 
