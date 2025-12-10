@@ -26,7 +26,7 @@
           </div>
           <div class="count">
             <span id="rice-count">0</span>
-            <span>Grains</span>
+            <span>Grains de riz</span>
           </div>
         </div>
 
@@ -79,7 +79,7 @@
             </div>
             <div class="description">
               <div class="upgrade-name">Machine à Vapeur</div>
-              <div class="upgrade-production">+100 riz/sec</div>
+              <div class="upgrade-production">+20 riz/sec</div>
               <div class="upgrade-cost" id="cost-steamMachine">
                 Coût: 200 riz
               </div>
@@ -96,7 +96,7 @@
             </div>
             <div class="description">
               <div class="upgrade-name">Robot Cuisinier</div>
-              <div class="upgrade-production">+20 riz/sec</div>
+              <div class="upgrade-production">+100 riz/sec</div>
               <div class="upgrade-cost" id="cost-robotCook">
                 Coût: 1,000 riz
               </div>
@@ -147,19 +147,56 @@
           <!-- ✨ AJOUTÉ : Barre de progression du plat -->
           <div class="dish-progress">
             <div class="progress-label">🍽️ Plat Suivant</div>
-            <div class="progress-timer" id="dish-timer">00:00</div>
+            <!-- <div class="progress-timer" id="dish-timer">00:00</div> -->
             <div class="progress-bar-container">
               <div class="progress-bar" id="progress-bar"></div>
             </div>
-            <div class="production-rate">
+            <!-- <div class="production-rate">
               <span id="production-rate">+0</span> Grains/sec
-            </div>
+            </div> -->
           </div>
         </div>
 
         <div class="bloc_right bloc_contain">
           <div class="bloc_rigth_description bloc_description">
             <h2>👨‍🍳 VOS CHEFS</h2>
+          </div>
+
+          <div class="option">
+            <div class="icone_bloc">
+              <img src="/images/chef cuisinier.jpeg" alt="" />
+            </div>
+            <div class="description">
+              <div class="upgrade-name">Chef Cuisinier</div>
+              <div class="upgrade-production">+750 riz/sec</div>
+              <div class="upgrade-cost">Coût: 10 Plats</div>
+            </div>
+            <div class="upgrade-count" id="robot-count">
+              <span>0</span>
+            </div>
+          </div>
+
+          <div class="option">
+            <div class="icone_bloc">
+              <img src="/images/chef robot cuisto.jpeg" alt="" />
+            </div>
+            <div class="description">
+              <div class="upgrade-name">Chef Robot Cuisinier</div>
+              <div class="upgrade-production">+1000 riz/sec</div>
+              <div class="upgrade-cost">Coût: 500 Plats</div>
+            </div>
+            <div class="upgrade-count" id="robot-count">
+              <span>0</span>
+            </div>
+          </div>
+
+          <div class="option">
+            <!-- ✨ AJOUTÉ : Boost Aleatoire -->
+            <div class="boost-bloc" id="boost-bloc" onclick="activateBoost()">
+              <div class="boost-title">⚡ BOOST ALEATOIRE</div>
+              <div class="boost-desc">Nombre de riz x3</div>
+              <div class="boost-timer" id="boost-timer">Disponible !</div>
+            </div>
           </div>
           <div class="option">
             <!-- ✨ AJOUTÉ : Boost quotidien -->
@@ -170,46 +207,6 @@
             </div>
           </div>
 
-          <div class="option">
-            <div class="icone_bloc">
-              <img src="/images/cuisinier.jpeg" alt="" />
-            </div>
-            <div class="description">
-              <div class="upgrade-name">Cuisinier Simple</div>
-              <div class="upgrade-production">+5 riz/sec</div>
-              <div class="upgrade-cost">Coût: 50 riz</div>
-            </div>
-            <div class="upgrade-count" id="robot-count">
-              <span>0</span>
-            </div>
-          </div>
-
-          <div class="option">
-            <div class="icone_bloc">
-              <img src="/images/machine cuisson.jpeg" alt="" />
-            </div>
-            <div class="description">
-              <div class="upgrade-name">Machine à Vapeur</div>
-              <div class="upgrade-production">+100 riz/sec</div>
-              <div class="upgrade-cost">Coût: 200 riz</div>
-            </div>
-            <div class="upgrade-count" id="robot-count">
-              <span>0</span>
-            </div>
-          </div>
-          <div class="option">
-            <div class="icone_bloc">
-              <img src="/images/robot.jpeg" alt="" />
-            </div>
-            <div class="description">
-              <div class="upgrade-name">Robot Cuisinier</div>
-              <div class="upgrade-production">+20 riz/sec</div>
-              <div class="upgrade-cost">Coût: 1,000 riz</div>
-            </div>
-            <div class="upgrade-count" id="robot-count">
-              <span>0</span>
-            </div>
-          </div>
         </div>
       </div>
 
@@ -221,5 +218,12 @@
         </button>
       </div>
     </div>
+
+    <div class="popup">
+      <div class="message"><span></span></div>
+      <div class="popup_im"></div>
+    </div>
+
+
   </body>
 </html>
