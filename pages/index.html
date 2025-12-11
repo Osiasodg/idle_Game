@@ -1,225 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/style.css" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
     <title>Document</title>
-  </head>
-  <body>
+</head>
+<body>
     <div class="container">
-      <!-- header -->
-      <div class="head">
-        <div class="image">
-          <div class="logo">
-            <img src="/images/شاف.jpeg" alt="" />
-          </div>
-        </div>
 
-        <div class="stat-box title">
-          <h1>LE CUISTO</h1>
-        </div>
-
-        <div class="stat-box">
-          <div class="stat-icon">
-            <img class="icon" src="/images/grain.jpeg" alt="" />
-          </div>
-          <div class="count">
-            <span id="rice-count">0</span>
-            <span>Grains</span>
-          </div>
-        </div>
-
-        <div class="stat-box">
-          <div class="stat-icon">
-            <img class="icon" src="/images/rise.jpeg" alt="" />
-          </div>
-          <div class="count">
-            <span id="dish-count">0</span>
-            <span>Plats</span>
-          </div>
-        </div>
-
-        <div class="stat-box">
-          <div class="stat-icon">
-            <img class="icon" src="/images/level.jpeg" alt="" />
-          </div>
-          <div class="count">
-            <span>Niveau <span id="level">1</span></span>
-          </div>
-        </div>
-      </div>
-
-      <!-- corp du jeux -->
-      <div class="game_sapace">
-        <div class="bloc_left bloc_contain">
-          <div class="bloc_left_description bloc_description">
-            <h2>⚙️ AMÉLIORATIONS</h2>
-          </div>
-
-          <!-- Cuisinier Simple -->
-          <div class="option" data-upgrade="simpleCook">
-            <div class="icone_bloc">
-              <img src="/images/cuisinier.jpeg" alt="" />
-            </div>
-            <div class="description">
-              <div class="upgrade-name">Cuisinier Simple</div>
-              <div class="upgrade-production">+5 riz/sec</div>
-              <div class="upgrade-cost" id="cost-simpleCook">Coût: 50 riz</div>
-            </div>
-            <div class="upgrade-count">
-              <span id="count-simpleCook">0</span>
-            </div>
-          </div>
-
-          <!-- Machine à Vapeur -->
-          <div class="option" data-upgrade="steamMachine">
-            <div class="icone_bloc">
-              <img src="/images/machine cuisson.jpeg" alt="" />
-            </div>
-            <div class="description">
-              <div class="upgrade-name">Machine à Vapeur</div>
-              <div class="upgrade-production">+100 riz/sec</div>
-              <div class="upgrade-cost" id="cost-steamMachine">
-                Coût: 200 riz
-              </div>
-            </div>
-            <div class="upgrade-count">
-              <span id="count-steamMachine">0</span>
-            </div>
-          </div>
-
-          <!-- Robot Cuisinier -->
-          <div class="option" data-upgrade="robotCook">
-            <div class="icone_bloc">
-              <img src="/images/robot.jpeg" alt="" />
-            </div>
-            <div class="description">
-              <div class="upgrade-name">Robot Cuisinier</div>
-              <div class="upgrade-production">+20 riz/sec</div>
-              <div class="upgrade-cost" id="cost-robotCook">
-                Coût: 1,000 riz
-              </div>
-            </div>
-            <div class="upgrade-count">
-              <span id="count-robotCook">0</span>
-            </div>
-          </div>
-
-          <!-- Usine Automatique -->
-          <div class="option" data-upgrade="autoFactory">
-            <div class="icone_bloc">
-              <img src="/images/usine.jpeg" alt="" />
-            </div>
-            <div class="description">
-              <div class="upgrade-name">Usine Automatique</div>
-              <div class="upgrade-production">+500 riz/sec</div>
-              <div class="upgrade-cost" id="cost-autoFactory">
-                Coût: 5,000 riz
-              </div>
-            </div>
-            <div class="upgrade-count">
-              <span id="count-autoFactory">0</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="bloc_center">
-          <div class="zone-title">
-            <h2>ZONE DE CUISSON</h2>
-            <p>🏠 Petit stand de rue</p>
-          </div>
-
-          <!-- ✨ AJOUTÉ : La marmite cliquable -->
-          <div class="pot-container">
-            <div class="pot-glow">
-              <img class="rice_cook" src="/images/pot de riz.jpeg" alt="" />
-            </div>
-            <div class="pot" id="pot" onclick="clickPot()">
-              <div class="pot-image">
-                <div class="rice-fill" id="rice-fill">
-                  <img src="/images/pot de riz vide.jpeg" alt="" />
+        <!-- header -->
+        <div class="head">
+            <div class="image">
+                <div class="logo">
+                    <img src="/images/شاف.jpeg" alt="">
                 </div>
-              </div>
             </div>
-          </div>
-
-          <!-- ✨ AJOUTÉ : Barre de progression du plat -->
-          <div class="dish-progress">
-            <div class="progress-label">🍽️ Plat Suivant</div>
-            <div class="progress-timer" id="dish-timer">00:00</div>
-            <div class="progress-bar-container">
-              <div class="progress-bar" id="progress-bar"></div>
+            <div class="stat-box title">
+                <h1>LE CUISTO</h1>
             </div>
-            <div class="production-rate">
-              <span id="production-rate">+0</span> Grains/sec
+            <div class="stat-box">
+                <div class="stat-icon"><img class="icon" src="/images/grain.jpeg" alt=""></div>
+                <div class="count">
+                    <span>0</span>
+                    <span >Grains</span>
+                </div>
             </div>
-          </div>
+            <div class="stat-box">
+                <div class="stat-icon"><img class="icon" src="/images/rise.jpeg" alt=""></div>
+                <div class="count">
+                    <span>0</span>
+                    <span>Plats</span>
+                </div>
+                
+            </div>
+            <div class="stat-box">
+                <div class="stat-icon"><img class="icon" src="/images/level.jpeg" alt=""></div>
+                <div class="count">
+                    <span>Niveau <span id="level">1</span></span>
+                </div>
+            </div>
         </div>
 
-        <div class="bloc_right bloc_contain">
-          <div class="bloc_rigth_description bloc_description">
-            <h2>👨‍🍳 VOS CHEFS</h2>
-          </div>
-          <div class="option">
-            <!-- ✨ AJOUTÉ : Boost quotidien -->
-            <div class="boost-bloc" id="boost-bloc" onclick="activateBoost()">
-              <div class="boost-title">⚡ BOOST QUOTIDIEN</div>
-              <div class="boost-desc">x2 riz pendant 3 min</div>
-              <div class="boost-timer" id="boost-timer">Disponible !</div>
-            </div>
-          </div>
+        <!-- corp du jeux -->
+        <div class="game_sapace">
+            <div class="bloc_left">
+                <div class="bloc_left_description">
+                    <h2>⚙️ AMÉLIORATIONS</h2>
+                </div>
+                <div class="option">
+                    <div class="icone_bloc"><img src="/images/cuisinier.jpeg" alt=""></div>
+                    <div class="description"></div>
+                </div>
+                <div class="option">
+                    <div class="icone_bloc"><img src="/images/machine cuisson.jpeg" alt=""></div>
+                    <div class="description"></div>
+                </div>
+                <div class="option">
+                    <div class="icone_bloc"><img src="/images/robot.jpeg" alt=""></div>
+                    <div class="description"></div>
+                </div>
 
-          <div class="option">
-            <div class="icone_bloc">
-              <img src="/images/cuisinier.jpeg" alt="" />
+                <div class="option">
+                    <div class="icone_bloc"><img src="/images/usine.jpeg" alt=""></div>
+                    <div class="description"></div>
+                </div>
+                <div class="option button"><button>Acheter</button></div>
+                
             </div>
-            <div class="description">
-              <div class="upgrade-name">Cuisinier Simple</div>
-              <div class="upgrade-production">+5 riz/sec</div>
-              <div class="upgrade-cost">Coût: 50 riz</div>
+            <div class="bloc_center"></div>
+            <div class="bloc_right">
+                
             </div>
-            <div class="upgrade-count" id="robot-count">
-              <span>0</span>
-            </div>
-          </div>
-
-          <div class="option">
-            <div class="icone_bloc">
-              <img src="/images/machine cuisson.jpeg" alt="" />
-            </div>
-            <div class="description">
-              <div class="upgrade-name">Machine à Vapeur</div>
-              <div class="upgrade-production">+100 riz/sec</div>
-              <div class="upgrade-cost">Coût: 200 riz</div>
-            </div>
-            <div class="upgrade-count" id="robot-count">
-              <span>0</span>
-            </div>
-          </div>
-          <div class="option">
-            <div class="icone_bloc">
-              <img src="/images/robot.jpeg" alt="" />
-            </div>
-            <div class="description">
-              <div class="upgrade-name">Robot Cuisinier</div>
-              <div class="upgrade-production">+20 riz/sec</div>
-              <div class="upgrade-cost">Coût: 1,000 riz</div>
-            </div>
-            <div class="upgrade-count" id="robot-count">
-              <span>0</span>
-            </div>
-          </div>
         </div>
-      </div>
 
-      <!-- footer -->
-      <div class="foot">
-        <button class="footer-btn" onclick="openRecipes()">📚 RECETTES</button>
-        <button class="footer-btn" onclick="openSettings()">
-          ⚙️ PARAMÈTRES
-        </button>
-      </div>
+        <!-- footer -->
+        <div class="foot">
+        </div>
     </div>
-  </body>
+</body>
 </html>
